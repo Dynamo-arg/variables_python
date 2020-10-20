@@ -11,7 +11,7 @@ Programa creado para que practiquen los conocimietos
 adquiridos durante la semana
 '''
 
-__author__ = "Inove Coding School"
+__author__ = "Sebas Volpe"
 __email__ = "alumnos@inove.com.ar"
 __version__ = "1.3"
 
@@ -32,8 +32,21 @@ def ej1():
       la operación realizada en cada caso y con que números
       se ha realizado la operación
       ej: La suma entre 4.2 y 6.5 es 10.7
-
     '''
+    print('Ingrese el primer numero:')
+    numero_1 = int(input())
+    print('Ingrese el segundo numero:')
+    numero_2 = int(input())
+    suma = numero_1 + numero_2
+    resta = numero_1 - numero_2
+    multiplicacion = numero_1 * numero_2
+    division = numero_1 / numero_2
+    exponente = numero_1 ** numero_2
+    print("La suma de", numero_1 ,"y", numero_2 ,"es",suma)
+    print("La resta de", numero_1 ,"y", numero_2 ,"es",resta)
+    print("La multiplicacin de", numero_1 ,"y", numero_2 ,"es",multiplicacion)
+    print("La division de", numero_1 ,"y", numero_2 ,"es",division)
+    print("El exponente de", numero_1 ,"y", numero_2 ,"es",exponente)
 
 
 def ej2():
@@ -55,6 +68,20 @@ def ej2():
       entienda de que se está hablando.
 
     '''
+    print('Ingrese su nombre Completo:')
+    nombre = str(input())
+    
+    print('Ingrese si DNI:')
+    dni = int(input())
+
+    print('Ingrese si edad:')
+    edad = int(input())
+
+    print('Ingrese su altura en metros:')
+    altura = float(input())
+    
+    print ("Nombre Completo:" ,nombre , "DNI:", dni)
+    print ("Nombre Completo:" ,nombre , "Edad:", edad , "Altura:", altura)
 
 
 def ej3():
@@ -89,6 +116,25 @@ def ej3():
     Cualquier duda con el método split pueden consultarla por el campus
 
     '''
+    print("Ingrese nombre Completo del Padre:")
+    nombre_padre = str(input())
+
+    print("Ingrese nombre Completo de la Madre:")
+    nombre_madre = str(input())
+
+    print("Ingrese nombre:")
+    nombre = str(input())
+
+    apellido_padre = nombre_padre.split()
+    apellido1 = apellido_padre[-1]
+
+    apellido_madre = nombre_madre.split()
+    apellido2 = apellido_madre[-1]
+
+    print("Su nombre completo es", nombre , apellido1 , apellido2)
+
+
+
 
 
 def ej4():
@@ -123,7 +169,21 @@ def ej4():
 
     Cualquier duda con el método split pueden consultarla por el campus
     '''
+    print("Ingrese nombre y apelldido 1:")
+    nombre_1 = str(input())
 
+    print("Ingrese nombre y apellido 2:")
+    nombre_2 = str(input())
+
+    apellido_extraer = nombre_2.split()
+    apellido_2 = apellido_extraer[-1]
+
+    contiene = apellido_2 in nombre_1
+
+    print("Son parientes estas dos personas?:" , contiene)
+
+
+  
 
 def ej5():
     # Ejercicios de práctica con cadenas
@@ -149,12 +209,22 @@ def ej5():
 
     Cualquier duda con estos métodos pueden consultarla por el campus
     '''
+    print("Ingrese su nombre completo:")
+    Nombre_completo = str(input())
+
+    mayuscula = Nombre_completo.upper()
+    minuscula = Nombre_completo.lower()
+    primera_letra = Nombre_completo.capitalize()
+    
+    print("Su nombre en Mayuscula:",mayuscula)
+    print("Su nombre en Minuscula:",minuscula)
+    print("Solo Mayuscula primer nombre:",primera_letra)    
 
 
 if __name__ == '__main__':
     print("Ejercicios de práctica")
     ej1()
-    # ej2()
-    # ej3()
-    # ej4()
-    # ej5()
+    ej2()
+    ej3()
+    ej4()
+    ej5()
